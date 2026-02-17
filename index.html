@@ -19,6 +19,7 @@
         <li><a href="#conversion">コンバージョン</a></li>
         <li><a href="#carousel">カルーセル</a></li>
         <li><a href="#tabs">タブUI</a></li>
+        <li><a href="#mobilefirst">モバイル</a></li>
         <li><a href="#patterns">UIパターン</a></li>
       </ul>
     </div>
@@ -276,6 +277,123 @@
             <span class="tag">white-space</span>
             <span class="tag">CSS variables</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ④½ MOBILE FIRST ===== -->
+  <section class="section mobilefirst-section" id="mobilefirst">
+    <div class="container">
+      <span class="section__label">Mobile First</span>
+      <h2 class="section__title">モバイルファーストのUI設計</h2>
+      <p class="section__desc">
+        小さな画面から設計を始め、大画面に拡張していくアプローチ。トグルを切り替えて、レイアウトがどう変化するか体験してみましょう。
+      </p>
+
+      <!-- Toggle: Mobile ⇄ Desktop -->
+      <div class="view-toggle">
+        <span class="view-toggle__label active" id="mf-label-mobile">📱 モバイル</span>
+        <div class="view-toggle__switch" id="mf-toggle" role="button" tabindex="0" aria-label="モバイルとデスクトップを切り替える"></div>
+        <span class="view-toggle__label" id="mf-label-desktop">🖥️ デスクトップ</span>
+      </div>
+
+      <!-- Phone Mockup -->
+      <div class="phone-mockup" id="mf-phone">
+        <div class="mock-layout">
+          <div class="mock-block mock-nav">☰ ナビゲーション</div>
+          <div class="mock-block mock-hero-block">ヒーロー画像</div>
+          <div class="mock-content-row">
+            <div class="mock-block mock-card">カード 1</div>
+            <div class="mock-block mock-card">カード 2</div>
+            <div class="mock-block mock-card">カード 3</div>
+          </div>
+          <div class="mock-block mock-cta-block">CTA ボタン</div>
+        </div>
+      </div>
+
+      <!-- Good vs Bad comparison -->
+      <div class="mf-compare">
+        <div class="mf-compare__item mf-compare__item--good">
+          <span class="mf-compare__badge">✅ Good — 縦並び（モバイル）</span>
+          <h4 class="mf-compare__title">コンテンツを縦にスタック</h4>
+          <p class="mf-compare__desc">
+            モバイルでは要素を縦に積み上げ、1カラムで表示。スクロールの流れに沿った自然なレイアウトになり、読みやすさが向上します。
+          </p>
+          <div class="mf-mini-demo mf-mini-demo--stack">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="mf-compare__item mf-compare__item--bad">
+          <span class="mf-compare__badge">❌ Bad — 横並びの強制</span>
+          <h4 class="mf-compare__title">小さな画面に横並びは NG</h4>
+          <p class="mf-compare__desc">
+            320px幅に3カラムを無理に表示すると、テキストが読めず、タップ領域も狭くなり、ユーザー体験が著しく低下します。
+          </p>
+          <div class="mf-mini-demo mf-mini-demo--row">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        <div class="mf-compare__item mf-compare__item--good">
+          <span class="mf-compare__badge">✅ Good — タップしやすいサイズ</span>
+          <h4 class="mf-compare__title">タップ領域は最低 44px</h4>
+          <p class="mf-compare__desc">
+            Apple HIG / Material Design ともに、ボタンやリンクのタップ領域は最低 44×44px を推奨。指で確実にタップできるサイズを確保しましょう。
+          </p>
+          <div class="mf-mini-demo mf-mini-demo--tap mf-mini-demo--stack">
+            <div class="good-tap">44px ✓</div>
+            <div class="good-tap">44px ✓</div>
+          </div>
+        </div>
+        <div class="mf-compare__item mf-compare__item--bad">
+          <span class="mf-compare__badge">❌ Bad — 小さすぎるボタン</span>
+          <h4 class="mf-compare__title">タップ領域が 20px 以下</h4>
+          <p class="mf-compare__desc">
+            小さなボタンは誤タップを誘発し、ユーザーにストレスを与えます。特にリンクが密集するフッターやメニューで問題になります。
+          </p>
+          <div class="mf-mini-demo mf-mini-demo--tap mf-mini-demo--stack">
+            <div class="bad-tap">20px ✗</div>
+            <div class="bad-tap">20px ✗</div>
+            <div class="bad-tap">20px ✗</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Checklist -->
+      <div class="mf-checklist">
+        <div class="mf-check-card">
+          <div class="mf-check-card__icon">📐</div>
+          <h4 class="mf-check-card__title">ビューポート設定</h4>
+          <p class="mf-check-card__text">
+            <code>&lt;meta name="viewport"&gt;</code> を必ず設定。<code>width=device-width, initial-scale=1</code>
+            で端末幅に合わせた表示を。
+          </p>
+        </div>
+        <div class="mf-check-card">
+          <div class="mf-check-card__icon">🔤</div>
+          <h4 class="mf-check-card__title">フォントサイズ</h4>
+          <p class="mf-check-card__text">
+            本文は最低 16px。<code>clamp()</code> を使えば画面幅に応じて自動的にスケーリングでき、可読性を維持できます。
+          </p>
+        </div>
+        <div class="mf-check-card">
+          <div class="mf-check-card__icon">📏</div>
+          <h4 class="mf-check-card__title">余白とスペーシング</h4>
+          <p class="mf-check-card__text">
+            固定値 (px) でなく相対値 (rem / %) を使用。画面サイズに応じて自然に伸縮する余白設計がモバイルの鍵です。
+          </p>
+        </div>
+        <div class="mf-check-card">
+          <div class="mf-check-card__icon">🍔</div>
+          <h4 class="mf-check-card__title">ナビゲーション</h4>
+          <p class="mf-check-card__text">
+            モバイルではハンバーガーメニューやボトムナビなど、片手操作を想定したナビゲーション設計が重要です。
+          </p>
         </div>
       </div>
     </div>
