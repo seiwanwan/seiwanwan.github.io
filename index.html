@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebデザインUIパターン学習ガイド</title>
+  <meta name="description" content="コンバージョン、カルーセル、タブ、アコーディオンなど、Webデザインに欠かせないUIパターンをインタラクティブに学べる学習ページです。">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== STICKY NAV ===== -->
+  <nav class="topnav" id="topnav">
+    <div class="container">
+      <a href="#" class="topnav__logo">UI<em>Lab</em></a>
+      <ul class="topnav__links">
+        <li><a href="#conversion">コンバージョン</a></li>
+        <li><a href="#carousel">カルーセル</a></li>
+        <li><a href="#tabs">タブUI</a></li>
+        <li><a href="#patterns">UIパターン</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== ① HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__content">
+      <span class="hero__badge">📘 Interactive Learning</span>
+      <h1 class="hero__title">Webデザイン<br>UIパターン学習ガイド</h1>
+      <p class="hero__subtitle">
+        コンバージョンの考え方から、カルーセル・タブ・アコーディオンなど<br>
+        現場で使われるUIコンポーネントをインタラクティブに体験しながら学べます。
+      </p>
+      <a href="#conversion" class="btn-cta">
+        <span>学習をはじめる</span>
+        <span class="arrow">→</span>
+      </a>
+      <p style="margin-top:18px; font-size:0.82rem; color:var(--text-secondary);">
+        ↑ これが<strong style="color:var(--accent-light)">CTA（Call To Action）</strong>ボタンです。このページ自体がUIの実例になっています！
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== ② CONVERSION ===== -->
+  <section class="section conversion" id="conversion">
+    <div class="container">
+      <span class="section__label">Conversion</span>
+      <h2 class="section__title">コンバージョンを理解しよう</h2>
+      <p class="section__desc">
+        Webサイトの目的を達成するために知っておくべき「コンバージョン」の基礎概念を学びましょう。
+      </p>
+
+      <!-- Info Cards -->
+      <div class="info-cards">
+        <div class="info-card">
+          <div class="info-card__icon info-card__icon--purple">🎯</div>
+          <h3 class="info-card__title">コンバージョン（CV）</h3>
+          <p class="info-card__text">
+            Webサイトにおける「成果」のこと。商品の購入、会員登録、お問い合わせ送信など、サイトの目的に応じて定義されます。
+          </p>
+        </div>
+        <div class="info-card">
+          <div class="info-card__icon info-card__icon--teal">📊</div>
+          <h3 class="info-card__title">CVR（コンバージョン率）</h3>
+          <p class="info-card__text">
+            サイト訪問者のうち、コンバージョンに至った割合。CVR = CV数 ÷ 訪問者数 × 100。一般的なECサイトでは1〜3%が目安です。
+          </p>
+        </div>
+        <div class="info-card">
+          <div class="info-card__icon info-card__icon--coral">🔘</div>
+          <h3 class="info-card__title">CTA（Call To Action）</h3>
+          <p class="info-card__text">
+            ユーザーに行動を促すボタンやリンク。「今すぐ購入」「無料で試す」など、具体的で分かりやすい文言が効果的です。
+          </p>
+        </div>
+      </div>
+
+      <!-- Funnel -->
+      <div class="funnel-wrapper">
+        <h3>📈 コンバージョンファネル</h3>
+        <p class="section__desc" style="margin-bottom:28px;">ユーザーがコンバージョンに至るまでの流れをファネル（じょうご）モデルで可視化します。</p>
+        <div class="funnel">
+          <div class="funnel__step">
+            <div class="funnel__step-num">1</div>
+            <div class="funnel__step-label">認知</div>
+            <div class="funnel__step-detail">サイトを知る</div>
+          </div>
+          <span class="funnel__arrow">▶</span>
+          <div class="funnel__step">
+            <div class="funnel__step-num">2</div>
+            <div class="funnel__step-label">興味</div>
+            <div class="funnel__step-detail">内容を読む</div>
+          </div>
+          <span class="funnel__arrow">▶</span>
+          <div class="funnel__step">
+            <div class="funnel__step-num">3</div>
+            <div class="funnel__step-label">行動</div>
+            <div class="funnel__step-detail">CTAをクリック</div>
+          </div>
+          <span class="funnel__arrow">▶</span>
+          <div class="funnel__step">
+            <div class="funnel__step-num">4</div>
+            <div class="funnel__step-label">成果</div>
+            <div class="funnel__step-detail">CV達成 🎉</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Comparison -->
+      <div class="cta-compare">
+        <h3>✅ 良いCTA vs ❌ 悪いCTA — クリックして比較してみよう</h3>
+        <div class="cta-example cta-example--good">
+          <div class="cta-example__label">✅ Good Example</div>
+          <button class="cta-example__btn" data-show-toast>無料で今すぐ始める →</button>
+          <p class="cta-example__desc">
+            具体的な行動・メリットを明示。グラデーション背景で視認性が高く、ホバー時に浮き上がるフィードバック付き。
+          </p>
+        </div>
+        <div class="cta-example cta-example--bad">
+          <div class="cta-example__label">❌ Bad Example</div>
+          <button class="cta-example__btn">こちら</button>
+          <p class="cta-example__desc">
+            何が起きるか不明。目立たないデザインで、ホバーフィードバックもなく、ユーザーは行動をためらいます。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ③ CAROUSEL ===== -->
+  <section class="section carousel-section" id="carousel">
+    <div class="container">
+      <span class="section__label">Carousel / Slider</span>
+      <h2 class="section__title">カルーセル（スライダー）</h2>
+      <p class="section__desc">
+        矢印やドットをクリックしてスライドを切り替えてみましょう。実際に動くカルーセルで仕組みを体験できます。
+      </p>
+
+      <div class="carousel">
+        <div class="carousel__track">
+          <!-- Slide 1 -->
+          <div class="carousel__slide">
+            <div class="carousel__slide-visual">
+              <span class="carousel__slide-icon">🖼️</span>
+            </div>
+            <div class="carousel__slide-body">
+              <h3 class="carousel__slide-title">ビジュアルの訴求力</h3>
+              <p class="carousel__slide-text">
+                カルーセルは限られたスペースで複数のコンテンツを提示できるUIパターンです。ヒーロー画像やプロモーションバナーに頻繁に使われます。自動再生とユーザー操作のバランスが重要です。
+              </p>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel__slide">
+            <div class="carousel__slide-visual">
+              <span class="carousel__slide-icon">⚡</span>
+            </div>
+            <div class="carousel__slide-body">
+              <h3 class="carousel__slide-title">操作のフィードバック</h3>
+              <p class="carousel__slide-text">
+                矢印ボタンやドットインジケーターにより、ユーザーは現在位置を把握できます。ホバー時のアニメーションで「クリックできる」ことを示す視覚的手がかりを提供しましょう。
+              </p>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel__slide">
+            <div class="carousel__slide-visual">
+              <span class="carousel__slide-icon">📱</span>
+            </div>
+            <div class="carousel__slide-body">
+              <h3 class="carousel__slide-title">レスポンシブ対応</h3>
+              <p class="carousel__slide-text">
+                モバイルではスワイプ操作が主流です。タッチデバイスを考慮してスワイプジェスチャーに対応させ、矢印のサイズもタップしやすいように調整しましょう。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrows -->
+        <button class="carousel__arrow carousel__arrow--prev" aria-label="前のスライド">◀</button>
+        <button class="carousel__arrow carousel__arrow--next" aria-label="次のスライド">▶</button>
+
+        <!-- Dots -->
+        <div class="carousel__dots">
+          <button class="carousel__dot active" aria-label="スライド1"></button>
+          <button class="carousel__dot" aria-label="スライド2"></button>
+          <button class="carousel__dot" aria-label="スライド3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ④ TABS ===== -->
+  <section class="section tabs-section" id="tabs">
+    <div class="container">
+      <span class="section__label">Tab UI</span>
+      <h2 class="section__title">タブUIで情報を整理</h2>
+      <p class="section__desc">
+        各タブをクリックして切り替えてみましょう。タブUIはカテゴリ分けされた情報を限られたスペースで表示するのに最適です。
+      </p>
+
+      <div class="tabs">
+        <div class="tabs__header">
+          <button class="tabs__btn active" data-tab="tab-grid">グリッドレイアウト</button>
+          <button class="tabs__btn" data-tab="tab-card">カードレイアウト</button>
+          <button class="tabs__btn" data-tab="tab-sidebar">サイドバー付き</button>
+          <button class="tabs__btn" data-tab="tab-tips">設計のコツ</button>
+        </div>
+        <div class="tabs__body">
+          <!-- Panel: Grid -->
+          <div class="tabs__panel active" id="tab-grid">
+            <h4>📐 グリッドレイアウト</h4>
+            <p>
+              CSS Gridを使って行と列を定義し、コンテンツを整然と並べるレイアウト。
+              ポートフォリオサイトやギャラリーで多く使われ、均等な間隔と一貫性のある見た目が特徴です。
+            </p>
+            <span class="tag">CSS Grid</span>
+            <span class="tag">display: grid</span>
+            <span class="tag">gallery</span>
+            <div class="layout-demo layout-demo--grid">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <!-- Panel: Card -->
+          <div class="tabs__panel" id="tab-card">
+            <h4>🃏 カードレイアウト</h4>
+            <p>
+              画像・タイトル・説明文を1つの「カード」としてまとめるパターン。
+              ECサイトの商品一覧やニュースサイトの記事一覧で定番のレイアウトです。ホバーエフェクトを加えるとインタラクティブに。
+            </p>
+            <span class="tag">Flexbox</span>
+            <span class="tag">hover effects</span>
+            <span class="tag">e-commerce</span>
+            <div class="layout-demo layout-demo--card">
+              <div style="height:80px;"></div>
+              <div style="height:80px;"></div>
+              <div style="height:80px;"></div>
+            </div>
+          </div>
+          <!-- Panel: Sidebar -->
+          <div class="tabs__panel" id="tab-sidebar">
+            <h4>📑 サイドバー付きレイアウト</h4>
+            <p>
+              ヘッダー + サイドバー + メインコンテンツで構成される管理画面やブログに多いレイアウト。
+              ナビゲーションを常に表示しつつ、コンテンツ領域を広く確保できます。
+            </p>
+            <span class="tag">sidebar</span>
+            <span class="tag">dashboard</span>
+            <span class="tag">blog</span>
+            <div class="layout-demo layout-demo--sidebar">
+              <div></div>
+              <div></div>
+              <div style="height:80px;"></div>
+            </div>
+          </div>
+          <!-- Panel: Tips -->
+          <div class="tabs__panel" id="tab-tips">
+            <h4>💡 レイアウト設計のコツ</h4>
+            <p>
+              <strong>①モバイルファースト：</strong>小さな画面から設計を始め、メディアクエリで大画面に拡張しましょう。
+            </p>
+            <p>
+              <strong>②余白（ホワイトスペース）：</strong>要素間に十分な余白を取ることで、視認性と高級感が格段に向上します。
+            </p>
+            <p>
+              <strong>③一貫性：</strong>色・フォント・間隔のルールをCSS変数で統一すると、保守性の高いデザインになります。
+            </p>
+            <span class="tag">mobile-first</span>
+            <span class="tag">white-space</span>
+            <span class="tag">CSS variables</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ⑤ OTHER UI PATTERNS ===== -->
+  <section class="section patterns-section" id="patterns">
+    <div class="container">
+      <span class="section__label">UI Patterns</span>
+      <h2 class="section__title">その他のUIパターン</h2>
+      <p class="section__desc">
+        Webサイトで頻繁に使われるインタラクティブなUIコンポーネントを実際に操作して学びましょう。
+      </p>
+
+      <div class="patterns-grid">
+        <!-- Accordion -->
+        <div class="pattern-card">
+          <h3 class="pattern-card__title">📂 アコーディオン</h3>
+          <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:18px;">
+            クリックで開閉できるFAQ形式のUI。必要な情報だけを表示して画面を整理できます。
+          </p>
+          <div class="accordion">
+            <div class="accordion__item open">
+              <button class="accordion__trigger">
+                アコーディオンとは？
+                <span class="accordion__icon">▼</span>
+              </button>
+              <div class="accordion__body">
+                <p>クリックでコンテンツを展開・折りたたみできるUIパターン。FAQやサイドメニューに多用されます。</p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger">
+                どんな場面で使う？
+                <span class="accordion__icon">▼</span>
+              </button>
+              <div class="accordion__body">
+                <p>よくある質問（FAQ）、設定画面のカテゴリ分け、長い説明テキストの折りたたみなどに効果的です。</p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger">
+                実装のポイントは？
+                <span class="accordion__icon">▼</span>
+              </button>
+              <div class="accordion__body">
+                <p>max-heightとtransitionを組み合わせることで、スムーズなアニメーション付きの開閉を実現できます。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal & Toast -->
+        <div class="pattern-card">
+          <h3 class="pattern-card__title">🪟 モーダル & トースト</h3>
+          <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:18px;">
+            ボタンをクリックして、モーダルウィンドウやトースト通知を体験してみましょう。
+          </p>
+          <div style="display:flex; flex-direction:column; gap:14px;">
+            <button class="btn-demo" data-open-modal>
+              🪟 モーダルを開く
+            </button>
+            <p style="font-size:0.82rem; color:var(--text-secondary); line-height:1.7;">
+              モーダルウィンドウは重要な確認やフォーム入力に使用。背景が暗くなりユーザーの注目を集めます。オーバーレイクリックでも閉じられます。
+            </p>
+            <button class="btn-demo btn-outline" data-show-toast>
+              🔔 トースト通知を表示
+            </button>
+            <p style="font-size:0.82rem; color:var(--text-secondary); line-height:1.7;">
+              トースト通知は一時的なフィードバック。「保存しました」「送信完了」など、操作結果を画面を遷移せずに伝えます。右下に表示され自動で消えます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ⑥ FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <h2 class="footer__title">🎓 お疲れさまでした！</h2>
+      <p class="footer__text">
+        このページで紹介したUIパターンは、実務で良く使われる基本的なものばかりです。<br>
+        ぜひ自分のプロジェクトで活用してみてください。
+      </p>
+      <ul class="footer__links">
+        <li><a href="#hero">トップに戻る</a></li>
+        <li><a href="#conversion">コンバージョン</a></li>
+        <li><a href="#carousel">カルーセル</a></li>
+        <li><a href="#tabs">タブUI</a></li>
+        <li><a href="#patterns">UIパターン</a></li>
+      </ul>
+      <p class="footer__copy">&copy; 2026 UILab — WebデザインUI学習ガイド</p>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL ===== -->
+  <div class="modal-overlay">
+    <div class="modal">
+      <div class="modal__icon">🪟</div>
+      <h3 class="modal__title">モーダルウィンドウ</h3>
+      <p class="modal__text">
+        これがモーダルウィンドウです。ユーザーの注意を引くための重要な情報表示や、確認ダイアログとして使用されます。<br><br>
+        背景のオーバーレイをクリックするか、下のボタンで閉じられます。
+      </p>
+      <button class="modal__close" data-close-modal>閉じる</button>
+    </div>
+  </div>
+
+  <!-- ===== TOAST CONTAINER ===== -->
+  <div class="toast-container"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
