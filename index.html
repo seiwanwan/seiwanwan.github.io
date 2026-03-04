@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WebデザインUIパターン学習ガイド</title>
+  <title>Web勉強会UI編</title>
   <meta name="description" content="コンバージョン、カルーセル、タブ、アコーディオンなど、Webデザインに欠かせないUIパターンをインタラクティブに学べる学習ページです。">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -14,13 +14,14 @@
   <!-- ===== STICKY NAV ===== -->
   <nav class="topnav" id="topnav">
     <div class="container">
-      <a href="#" class="topnav__logo">UI<em>Lab</em></a>
+      <a href="#" class="topnav__logo">WEB勉強会<em>UI編</em></a>
       <ul class="topnav__links">
         <li><a href="#conversion">コンバージョン</a></li>
+        <li><a href="#mobilefirst">モバイル</a></li>
         <li><a href="#carousel">カルーセル</a></li>
         <li><a href="#tabs">タブUI</a></li>
-        <li><a href="#mobilefirst">モバイル</a></li>
         <li><a href="#patterns">UIパターン</a></li>
+        <li><a href="#inspiration">素敵なサイト</a></li>
       </ul>
     </div>
   </nav>
@@ -29,18 +30,131 @@
   <section class="hero" id="hero">
     <div class="hero__content">
       <span class="hero__badge">📘 Interactive Learning</span>
-      <h1 class="hero__title">Webデザイン<br>UIパターン学習ガイド</h1>
+      <h1 class="hero__title">Web勉強会<br>UI編</h1>
       <p class="hero__subtitle">
         コンバージョンの考え方から、カルーセル・タブ・アコーディオンなど<br>
         現場で使われるUIコンポーネントをインタラクティブに体験しながら学べます。
       </p>
-      <a href="#conversion" class="btn-cta">
+      <a href="#ui-overview" class="btn-cta">
         <span>学習をはじめる</span>
         <span class="arrow">→</span>
       </a>
       <p style="margin-top:18px; font-size:0.82rem; color:var(--text-secondary);">
         ↑ これが<strong style="color:var(--accent-light)">CTA（Call To Action）</strong>ボタンです。このページ自体がUIの実例になっています！
       </p>
+    </div>
+  </section>
+
+  <!-- ===== ①½ UI OVERVIEW ===== -->
+  <section class="section ui-overview-section" id="ui-overview">
+    <div class="container">
+      <span class="section__label">What is UI?</span>
+      <h2 class="section__title">UI（ユーザーインターフェース）とは</h2>
+      <p class="section__desc">
+        UIとは、ユーザーとプロダクト（Webサイトやアプリ）との「接点」のこと。<br>
+        ボタン、フォーム、ナビゲーション、色、タイポグラフィなど、ユーザーが目にし操作するすべての要素がUIに含まれます。
+      </p>
+
+      <div class="ui-overview-grid">
+        <div class="ui-overview-card">
+          <div class="ui-overview-card__num">01</div>
+          <h3 class="ui-overview-card__title">ビジュアルデザイン</h3>
+          <p class="ui-overview-card__text">
+            色彩、タイポグラフィ、アイコン、画像など、視覚的な要素を通じてユーザーに情報を伝えます。一貫したビジュアルルールがブランドの信頼感を生み出します。
+          </p>
+          <div class="ui-overview-card__tags">
+            <span class="tag">Color</span>
+            <span class="tag">Typography</span>
+            <span class="tag">Icons</span>
+          </div>
+        </div>
+        <div class="ui-overview-card">
+          <div class="ui-overview-card__num">02</div>
+          <h3 class="ui-overview-card__title">インタラクションデザイン</h3>
+          <p class="ui-overview-card__text">
+            ボタンのホバー効果、アニメーション、トランジションなど、ユーザーの操作に対するフィードバックを設計します。適切なインタラクションは「使いやすさ」につながります。
+          </p>
+          <div class="ui-overview-card__tags">
+            <span class="tag">Hover</span>
+            <span class="tag">Animation</span>
+            <span class="tag">Feedback</span>
+          </div>
+        </div>
+        <div class="ui-overview-card">
+          <div class="ui-overview-card__num">03</div>
+          <h3 class="ui-overview-card__title">情報設計（IA）</h3>
+          <p class="ui-overview-card__text">
+            情報の階層構造やナビゲーション設計を通じて、ユーザーが迷わず目的の情報に到達できるようにします。「どこに何があるか」を直感的に理解できるUIが理想です。
+          </p>
+          <div class="ui-overview-card__tags">
+            <span class="tag">Navigation</span>
+            <span class="tag">Hierarchy</span>
+            <span class="tag">Layout</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ①¾ UX SUPPLEMENT ===== -->
+  <section class="section ux-supplement-section" id="ux-supplement">
+    <div class="container">
+      <span class="section__label">UI & UX</span>
+      <h2 class="section__title">補足：UX（ユーザー体験）との関係</h2>
+      <p class="section__desc">
+        UIが「見た目や操作方法」を指すのに対し、UXは「ユーザーが得る体験全体」を意味します。<br>
+        優れたUIはUXの一部であり、両者を正しく理解することがプロダクト設計の基本です。
+      </p>
+
+      <div class="ux-diagram">
+        <img src="images/ux_ui_diagram.png" alt="UXとUIの関係を示す図。UXの大きな枠の中にUIが存在し、ユーザーとプロダクトの接点を表しています。">
+      </div>
+
+      <div class="ux-nested">
+        <!-- Outer: UX -->
+        <div class="ux-nested__outer">
+          <div class="ux-nested__outer-header">
+            <span class="ux-comparison__badge">UX</span>
+            <h3 class="ux-comparison__title">ユーザーエクスペリエンス</h3>
+          </div>
+          <p class="ux-nested__outer-caption">→ 「どう感じるか・どう体験するか」</p>
+          <ul class="ux-nested__outer-list">
+            <li>タスク完了までの容易さ</li>
+            <li>使用後の満足感・感情</li>
+            <li>ページ読み込み速度の体感</li>
+            <li>全体的なサービスの印象</li>
+          </ul>
+
+          <!-- Inner: UI (nested inside UX) -->
+          <div class="ux-nested__inner">
+            <div class="ux-nested__inner-header">
+              <span class="ux-comparison__badge ux-comparison__badge--ui">UI</span>
+              <h3 class="ux-comparison__title">ユーザーインターフェース</h3>
+            </div>
+            <ul class="ux-nested__inner-list">
+              <li>ボタンやフォームのデザイン</li>
+              <li>色・フォント・レイアウト</li>
+              <li>アニメーションやトランジション</li>
+              <li>視覚的な一貫性とブランディング</li>
+            </ul>
+            <p class="ux-nested__inner-caption">→ 「どう見えるか・どう操作するか」</p>
+          </div>
+
+          <p class="ux-nested__relation">UIはUXの一部として存在しています</p>
+        </div>
+      </div>
+
+      <div class="ux-keypoint">
+        <div class="ux-keypoint__icon">💡</div>
+        <div class="ux-keypoint__body">
+          <h4 class="ux-keypoint__title">覚えておきたいポイント</h4>
+          <p class="ux-keypoint__text">
+            見た目が美しい（=良いUI）だけでは、良い体験（=良いUX）とは限りません。
+            たとえば、デザインは洗練されていても、購入までに10ステップ必要なECサイトはUXが悪いと言えます。
+            UIとUXは常にセットで考え、「ユーザーの目的を最短で達成できるか？」を意識しましょう。
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -61,19 +175,20 @@
           <p class="info-card__text">
             Webサイトにおける「成果」のこと。商品の購入、会員登録、お問い合わせ送信など、サイトの目的に応じて定義されます。
           </p>
-        </div>
-        <div class="info-card">
-          <div class="info-card__icon info-card__icon--teal">📊</div>
-          <h3 class="info-card__title">CVR（コンバージョン率）</h3>
           <p class="info-card__text">
-            サイト訪問者のうち、コンバージョンに至った割合。CVR = CV数 ÷ 訪問者数 × 100。一般的なECサイトでは1〜3%が目安です。
+            <strong>そのWebサイト・ページが「何を目的にしているのか？」「達成したいことは何か」はとても大切です。その目的を達成するためにデザインで促すことが、UIデザインだと言えます。</strong>
           </p>
         </div>
         <div class="info-card">
-          <div class="info-card__icon info-card__icon--coral">🔘</div>
           <h3 class="info-card__title">CTA（Call To Action）</h3>
           <p class="info-card__text">
             ユーザーに行動を促すボタンやリンク。「今すぐ購入」「無料で試す」など、具体的で分かりやすい文言が効果的です。
+          </p>
+        </div>
+        <div class="info-card">
+          <h3 class="info-card__title">CVR（コンバージョン率）</h3>
+          <p class="info-card__text">
+            サイト訪問者のうち、コンバージョンに至った割合。CVR = CV数 ÷ 訪問者数 × 100。一般的なECサイトでは1〜3%が目安です。
           </p>
         </div>
       </div>
@@ -126,6 +241,138 @@
             何が起きるか不明。目立たないデザインで、ホバーフィードバックもなく、ユーザーは行動をためらいます。
           </p>
         </div>
+      </div>
+    </div>
+    <p class="info-card__text" style="margin-top: 24px; font-size: 0.82rem; text-align: center;">コンバージョンデザインの参考はこちら</p>
+    <div style="text-align: center;">
+      <a href="https://www.mizuho-fg.co.jp/saiyou/group/index.html" target="_blank" rel="noopener noreferrer"
+        class="btn-cta" style="font-size: 0.78rem; padding: 12px 28px; margin-top: 8px;">みずほフィナンシャルグループ 採用サイトを見る →</a>
+    </div>
+  </section>
+
+  <!-- ===== MOBILE FIRST ===== -->
+  <section class="section mobilefirst-section" id="mobilefirst">
+    <div class="container">
+      <span class="section__label">Mobile First</span>
+      <h2 class="section__title">モバイルファーストのUI設計</h2>
+      <p class="section__desc">
+        小さな画面から設計を始め、大画面に拡張していくアプローチ。トグルを切り替えて、レイアウトがどう変化するか体験してみましょう。
+      </p>
+
+      <!-- Toggle: Mobile ⇄ Desktop -->
+      <div class="view-toggle">
+        <button class="view-toggle__btn active" id="mf-btn-mobile" data-mode="mobile">📱 モバイル</button>
+        <button class="view-toggle__btn" id="mf-btn-desktop1" data-mode="desktop1">🖥️ デスクトップ1</button>
+        <button class="view-toggle__btn" id="mf-btn-desktop2" data-mode="desktop2">🖥️ デスクトップ2</button>
+      </div>
+
+      <!-- Phone Mockup -->
+      <div class="phone-mockup" id="mf-phone">
+        <div class="mock-layout">
+          <div class="mock-block mock-nav">☰ ナビゲーション</div>
+          <div class="mock-block mock-hero-block">ヒーロー画像</div>
+          <div class="mock-content-row">
+            <div class="mock-block mock-card">カード 1</div>
+            <div class="mock-block mock-card">カード 2</div>
+            <div class="mock-block mock-card">カード 3</div>
+          </div>
+          <div class="mock-block mock-cta-block">CTA ボタン</div>
+        </div>
+      </div>
+
+      <!-- Good vs Bad comparison -->
+      <div class="mf-compare">
+        <div class="mf-compare__item mf-compare__item--good">
+          <span class="mf-compare__badge">✅ Good — 縦並び（モバイル）</span>
+          <h4 class="mf-compare__title">コンテンツを縦にスタック</h4>
+          <p class="mf-compare__desc">
+            モバイルでは要素を縦に積み上げ、1カラムで表示。スクロールの流れに沿った自然なレイアウトになり、読みやすさが向上します。
+          </p>
+          <div class="mf-mini-demo mf-mini-demo--stack">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="mf-compare__item mf-compare__item--bad">
+          <span class="mf-compare__badge">❌ Bad — 横並びの強制</span>
+          <h4 class="mf-compare__title">小さな画面に横並びは NG</h4>
+          <p class="mf-compare__desc">
+            320px幅に3カラムを無理に表示すると、テキストが読めず、タップ領域も狭くなり、ユーザー体験が著しく低下します。
+          </p>
+          <div class="mf-mini-demo mf-mini-demo--row">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        <div class="mf-compare__item mf-compare__item--good">
+          <span class="mf-compare__badge">✅ Good — タップしやすいサイズ</span>
+          <h4 class="mf-compare__title">タップ領域は最低 44px</h4>
+          <p class="mf-compare__desc">
+            Apple HIG / Material Design ともに、ボタンやリンクのタップ領域は最低 44×44px を推奨。指で確実にタップできるサイズを確保しましょう。
+          </p>
+          <div class="mf-mini-demo mf-mini-demo--tap mf-mini-demo--stack">
+            <div class="good-tap">44px ✓</div>
+            <div class="good-tap">44px ✓</div>
+          </div>
+          <p class="info-card__text" style="margin-top: 16px; font-size: 0.82rem;">Apple HIG / Material Designについてはこちら
+          </p>
+          <a href="https://note.com/saaa_san/n/na9d8a8f2664f" target="_blank" rel="noopener noreferrer" class="btn-cta"
+            style="font-size: 0.78rem; padding: 12px 28px; margin-top: 8px;">詳しく読む →</a>
+        </div>
+        <div class="mf-compare__item mf-compare__item--bad">
+          <span class="mf-compare__badge">❌ Bad — 小さすぎるボタン</span>
+          <h4 class="mf-compare__title">タップ領域が 20px 以下</h4>
+          <p class="mf-compare__desc">
+            小さなボタンは誤タップを誘発し、ユーザーにストレスを与えます。特にリンクが密集するフッターやメニューで問題になります。
+          </p>
+          <div class="mf-mini-demo mf-mini-demo--tap mf-mini-demo--stack">
+            <div class="bad-tap">20px ✗</div>
+            <div class="bad-tap">20px ✗</div>
+            <div class="bad-tap">20px ✗</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Checklist -->
+      <div class="mf-checklist" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="mf-check-card">
+          <div class="mf-check-card__icon">🔤</div>
+          <h4 class="mf-check-card__title">フォントサイズ</h4>
+          <p class="mf-check-card__text">
+            本文は最低 16px。
+          </p>
+          <p class="mf-check-card__text">
+            小さすぎるフォントは読みにくく、ユーザーがピンチズーム（拡大操作）を強いられます。見出しと本文のコントラスト（ジャンプ率）を意識し、情報の優先度を視覚的に示しましょう。
+          </p>
+        </div>
+        <div class="mf-check-card">
+          <div class="mf-check-card__icon">🍔</div>
+          <h4 class="mf-check-card__title">ナビゲーション</h4>
+          <p class="mf-check-card__text">
+            モバイルではハンバーガーメニューやボトムナビなど、片手操作を想定したナビゲーション設計が重要です。
+          </p>
+          <p class="mf-check-card__text">
+            <strong>📱 親指ゾーン（Thumb Zone）</strong><br>
+            スマートフォンを片手で持ったとき、親指が自然に届く範囲を「親指ゾーン」と呼びます。画面下部が最も操作しやすく、上部や端は届きにくい領域です。
+          </p>
+          <p class="mf-check-card__text">
+            主要なナビゲーションやアクションボタンは<strong>画面下部（親指が届く範囲）</strong>に配置することで、ユーザーが片手でも快適に操作できるUIになります。多くのアプリがボトムナビゲーションを採用しているのはこのためです。
+          </p>
+          <p class="mf-check-card__text" style="margin-top: 8px; font-size: 0.82rem;">ボトムナビゲーションの参考はこちら</p>
+          <a href="https://www.unzen.org/" target="_blank" rel="noopener noreferrer" class="btn-cta"
+            style="font-size: 0.78rem; padding: 12px 28px; margin-top: 8px;">雲仙温泉サイトを見る →</a>
+        </div>
+      </div>
+
+      <div class="mf-check-card" style="margin-top: 20px;">
+        <div class="mf-check-card__icon">🌐</div>
+        <h4 class="mf-check-card__title">ブラウザUIの存在を忘れずに</h4>
+        <p class="mf-check-card__text">
+          モバイルブラウザで表示する場合、画面上部のアドレスバー（検索エリア）や画面下部の戻る・進むボタンなどのブラウザUIが表示領域を占有します。実際にコンテンツが表示される領域はデバイスの画面サイズよりも狭くなるため、レイアウト設計時にはこの分のスペースも考慮しましょう。
+        </p>
       </div>
     </div>
   </section>
@@ -190,6 +437,11 @@
           <button class="carousel__dot" aria-label="スライド3"></button>
         </div>
       </div>
+      <p class="info-card__text" style="margin-top: 24px; font-size: 0.82rem; text-align: center;">カルーセルデザインの参考はこちら</p>
+      <div style="text-align: center;">
+        <a href="https://fukanuma-uminohiroba.jp/" target="_blank" rel="noopener noreferrer" class="btn-cta"
+          style="font-size: 0.78rem; padding: 12px 28px; margin-top: 8px;">深沼海水浴場を見る →</a>
+      </div>
     </div>
   </section>
 
@@ -207,7 +459,6 @@
           <button class="tabs__btn active" data-tab="tab-grid">グリッドレイアウト</button>
           <button class="tabs__btn" data-tab="tab-card">カードレイアウト</button>
           <button class="tabs__btn" data-tab="tab-sidebar">サイドバー付き</button>
-          <button class="tabs__btn" data-tab="tab-tips">設計のコツ</button>
         </div>
         <div class="tabs__body">
           <!-- Panel: Grid -->
@@ -244,6 +495,10 @@
               <div style="height:80px;"></div>
               <div style="height:80px;"></div>
             </div>
+            <p class="info-card__text" style="margin-top: 16px; font-size: 0.82rem;">カードデザインの参考はこちら</p>
+            <a href="https://www.apple.com/jp/store?afid=p240%7Cgo~cmp-218435661~adg-187346646474~ad-798895423384_kwd-10778630~dev-c~ext-~prd-~mca-~nt-search&cid=aos-jp-kwgo-txt-brand-Brand--"
+              target="_blank" rel="noopener noreferrer" class="btn-cta"
+              style="font-size: 0.78rem; padding: 12px 28px; margin-top: 8px;">Apple Store を見る →</a>
           </div>
           <!-- Panel: Sidebar -->
           <div class="tabs__panel" id="tab-sidebar">
@@ -260,144 +515,22 @@
               <div></div>
               <div style="height:80px;"></div>
             </div>
-          </div>
-          <!-- Panel: Tips -->
-          <div class="tabs__panel" id="tab-tips">
-            <h4>💡 レイアウト設計のコツ</h4>
-            <p>
-              <strong>①モバイルファースト：</strong>小さな画面から設計を始め、メディアクエリで大画面に拡張しましょう。
-            </p>
-            <p>
-              <strong>②余白（ホワイトスペース）：</strong>要素間に十分な余白を取ることで、視認性と高級感が格段に向上します。
-            </p>
-            <p>
-              <strong>③一貫性：</strong>色・フォント・間隔のルールをCSS変数で統一すると、保守性の高いデザインになります。
-            </p>
-            <span class="tag">mobile-first</span>
-            <span class="tag">white-space</span>
-            <span class="tag">CSS variables</span>
+            <p class="info-card__text" style="margin-top: 16px; font-size: 0.82rem;">サイドバーレイアウトの参考はこちら</p>
+            <a href="https://shueisha-bukatsu.jp/" target="_blank" rel="noopener noreferrer" class="btn-cta"
+              style="font-size: 0.78rem; padding: 12px 28px; margin-top: 8px;">集英社 部活サイトを見る →</a>
+            <a href="http://cunagino-nedoko.net/" target="_blank" rel="noopener noreferrer" class="btn-cta"
+              style="font-size: 0.78rem; padding: 12px 28px; margin-top: 8px;">うなぎの寝床を見る →</a>
           </div>
         </div>
+      </div>
+      <p class="info-card__text" style="margin-top: 24px; font-size: 0.82rem; text-align: center;">タブUIデザインの参考はこちら</p>
+      <div style="text-align: center;">
+        <a href="https://fumino.b-rave.tokyo/" target="_blank" rel="noopener noreferrer" class="btn-cta"
+          style="font-size: 0.78rem; padding: 12px 28px; margin-top: 8px;">fumino を見る →</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== ④½ MOBILE FIRST ===== -->
-  <section class="section mobilefirst-section" id="mobilefirst">
-    <div class="container">
-      <span class="section__label">Mobile First</span>
-      <h2 class="section__title">モバイルファーストのUI設計</h2>
-      <p class="section__desc">
-        小さな画面から設計を始め、大画面に拡張していくアプローチ。トグルを切り替えて、レイアウトがどう変化するか体験してみましょう。
-      </p>
-
-      <!-- Toggle: Mobile ⇄ Desktop -->
-      <div class="view-toggle">
-        <span class="view-toggle__label active" id="mf-label-mobile">📱 モバイル</span>
-        <div class="view-toggle__switch" id="mf-toggle" role="button" tabindex="0" aria-label="モバイルとデスクトップを切り替える"></div>
-        <span class="view-toggle__label" id="mf-label-desktop">🖥️ デスクトップ</span>
-      </div>
-
-      <!-- Phone Mockup -->
-      <div class="phone-mockup" id="mf-phone">
-        <div class="mock-layout">
-          <div class="mock-block mock-nav">☰ ナビゲーション</div>
-          <div class="mock-block mock-hero-block">ヒーロー画像</div>
-          <div class="mock-content-row">
-            <div class="mock-block mock-card">カード 1</div>
-            <div class="mock-block mock-card">カード 2</div>
-            <div class="mock-block mock-card">カード 3</div>
-          </div>
-          <div class="mock-block mock-cta-block">CTA ボタン</div>
-        </div>
-      </div>
-
-      <!-- Good vs Bad comparison -->
-      <div class="mf-compare">
-        <div class="mf-compare__item mf-compare__item--good">
-          <span class="mf-compare__badge">✅ Good — 縦並び（モバイル）</span>
-          <h4 class="mf-compare__title">コンテンツを縦にスタック</h4>
-          <p class="mf-compare__desc">
-            モバイルでは要素を縦に積み上げ、1カラムで表示。スクロールの流れに沿った自然なレイアウトになり、読みやすさが向上します。
-          </p>
-          <div class="mf-mini-demo mf-mini-demo--stack">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
-        <div class="mf-compare__item mf-compare__item--bad">
-          <span class="mf-compare__badge">❌ Bad — 横並びの強制</span>
-          <h4 class="mf-compare__title">小さな画面に横並びは NG</h4>
-          <p class="mf-compare__desc">
-            320px幅に3カラムを無理に表示すると、テキストが読めず、タップ領域も狭くなり、ユーザー体験が著しく低下します。
-          </p>
-          <div class="mf-mini-demo mf-mini-demo--row">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
-
-        <div class="mf-compare__item mf-compare__item--good">
-          <span class="mf-compare__badge">✅ Good — タップしやすいサイズ</span>
-          <h4 class="mf-compare__title">タップ領域は最低 44px</h4>
-          <p class="mf-compare__desc">
-            Apple HIG / Material Design ともに、ボタンやリンクのタップ領域は最低 44×44px を推奨。指で確実にタップできるサイズを確保しましょう。
-          </p>
-          <div class="mf-mini-demo mf-mini-demo--tap mf-mini-demo--stack">
-            <div class="good-tap">44px ✓</div>
-            <div class="good-tap">44px ✓</div>
-          </div>
-        </div>
-        <div class="mf-compare__item mf-compare__item--bad">
-          <span class="mf-compare__badge">❌ Bad — 小さすぎるボタン</span>
-          <h4 class="mf-compare__title">タップ領域が 20px 以下</h4>
-          <p class="mf-compare__desc">
-            小さなボタンは誤タップを誘発し、ユーザーにストレスを与えます。特にリンクが密集するフッターやメニューで問題になります。
-          </p>
-          <div class="mf-mini-demo mf-mini-demo--tap mf-mini-demo--stack">
-            <div class="bad-tap">20px ✗</div>
-            <div class="bad-tap">20px ✗</div>
-            <div class="bad-tap">20px ✗</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Checklist -->
-      <div class="mf-checklist">
-        <div class="mf-check-card">
-          <div class="mf-check-card__icon">📐</div>
-          <h4 class="mf-check-card__title">ビューポート設定</h4>
-          <p class="mf-check-card__text">
-            <code>&lt;meta name="viewport"&gt;</code> を必ず設定。<code>width=device-width, initial-scale=1</code>
-            で端末幅に合わせた表示を。
-          </p>
-        </div>
-        <div class="mf-check-card">
-          <div class="mf-check-card__icon">🔤</div>
-          <h4 class="mf-check-card__title">フォントサイズ</h4>
-          <p class="mf-check-card__text">
-            本文は最低 16px。<code>clamp()</code> を使えば画面幅に応じて自動的にスケーリングでき、可読性を維持できます。
-          </p>
-        </div>
-        <div class="mf-check-card">
-          <div class="mf-check-card__icon">📏</div>
-          <h4 class="mf-check-card__title">余白とスペーシング</h4>
-          <p class="mf-check-card__text">
-            固定値 (px) でなく相対値 (rem / %) を使用。画面サイズに応じて自然に伸縮する余白設計がモバイルの鍵です。
-          </p>
-        </div>
-        <div class="mf-check-card">
-          <div class="mf-check-card__icon">🍔</div>
-          <h4 class="mf-check-card__title">ナビゲーション</h4>
-          <p class="mf-check-card__text">
-            モバイルではハンバーガーメニューやボトムナビなど、片手操作を想定したナビゲーション設計が重要です。
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ===== ⑤ OTHER UI PATTERNS ===== -->
   <section class="section patterns-section" id="patterns">
@@ -434,15 +567,7 @@
                 <p>よくある質問（FAQ）、設定画面のカテゴリ分け、長い説明テキストの折りたたみなどに効果的です。</p>
               </div>
             </div>
-            <div class="accordion__item">
-              <button class="accordion__trigger">
-                実装のポイントは？
-                <span class="accordion__icon">▼</span>
-              </button>
-              <div class="accordion__body">
-                <p>max-heightとtransitionを組み合わせることで、スムーズなアニメーション付きの開閉を実現できます。</p>
-              </div>
-            </div>
+
           </div>
         </div>
 
@@ -471,6 +596,33 @@
     </div>
   </section>
 
+  <!-- ===== INSPIRATION SITES ===== -->
+  <section class="section inspiration-section" id="inspiration">
+    <div class="container">
+      <span class="section__label">Inspiration</span>
+      <h2 class="section__title">素敵なサイトを見てみよう</h2>
+      <p class="section__desc">
+        実際のWebサイトを見て、優れたUI/UXデザインの参考にしましょう。
+      </p>
+
+      <div class="inspiration-grid">
+        <a href="https://www.fujiya-peko.co.jp/cakebrand/" target="_blank" rel="noopener noreferrer"
+          class="inspiration-card">
+          <div class="inspiration-card__icon">🍰</div>
+          <h4 class="inspiration-card__title">不二家洋菓子店</h4>
+          <p class="inspiration-card__desc">ペコちゃんでおなじみの不二家の洋菓子ブランドサイト。華やかなビジュアルと直感的なナビゲーションが特徴です。</p>
+          <span class="inspiration-card__link">サイトを見る →</span>
+        </a>
+        <a href="https://www.biscom.jp/10th/" target="_blank" rel="noopener noreferrer" class="inspiration-card">
+          <div class="inspiration-card__icon">🎉</div>
+          <h4 class="inspiration-card__title">BISCOM 10周年サイト</h4>
+          <p class="inspiration-card__desc">Web制作会社BISCOMの10周年記念サイト。アニメーションとインタラクションを効果的に活用したデザインです。</p>
+          <span class="inspiration-card__link">サイトを見る →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== ⑥ FOOTER ===== -->
   <footer class="footer" id="footer">
     <div class="container footer__inner">
@@ -482,9 +634,11 @@
       <ul class="footer__links">
         <li><a href="#hero">トップに戻る</a></li>
         <li><a href="#conversion">コンバージョン</a></li>
+        <li><a href="#mobilefirst">モバイル</a></li>
         <li><a href="#carousel">カルーセル</a></li>
         <li><a href="#tabs">タブUI</a></li>
         <li><a href="#patterns">UIパターン</a></li>
+        <li><a href="#inspiration">素敵なサイト</a></li>
       </ul>
       <p class="footer__copy">&copy; 2026 UILab — WebデザインUI学習ガイド</p>
     </div>

@@ -114,19 +114,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ========================================
-       MOBILE FIRST TOGGLE
+       MOBILE FIRST TOGGLE (3-state)
        ======================================== */
-    const mfToggle = document.getElementById('mf-toggle');
+    const mfBtns = document.querySelectorAll('.view-toggle__btn');
     const mfPhone = document.getElementById('mf-phone');
-    const mfLabelMob = document.getElementById('mf-label-mobile');
-    const mfLabelDt = document.getElementById('mf-label-desktop');
 
-    if (mfToggle) {
-        mfToggle.addEventListener('click', () => {
-            const isDesktop = mfToggle.classList.toggle('toggled');
-            mfPhone.classList.toggle('desktop-mode', isDesktop);
-            mfLabelMob.classList.toggle('active', !isDesktop);
-            mfLabelDt.classList.toggle('active', isDesktop);
+    if (mfBtns.length && mfPhone) {
+        mfBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                mfBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Remove all mode classes
+                mfPhone.classList.remove('desktop-mode', 'desktop-mode-1');
+
+                // Apply selected mode
+                const mode = btn.dataset.mode;
+                if (mode === 'desktop1') {
+                    mfPhone.classList.add('desktop-mode-1');
+                } else if (mode === 'desktop2') {
+                    mfPhone.classList.add('desktop-mode');
+                }
+            });
         });
     }
 
